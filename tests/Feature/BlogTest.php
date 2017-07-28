@@ -3,7 +3,6 @@
 namespace Tests\Feature;
 
 use App\Blog;
-use Carbon\Carbon;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
@@ -19,7 +18,7 @@ class BlogTest extends TestCase
 
         $this->json('GET', '/api/v1/blog')
             ->assertStatus(200)
-            ->assertJson([
+            ->assertJsonFragment([
                 'title' => $blog->title,
                 'body' => $blog->body,
                 'published_at' => $blog->published_at->toDateTimeString()

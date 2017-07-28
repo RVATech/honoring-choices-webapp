@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Blog;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -13,7 +14,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return response()->json([], 200);
+        $blogs = Blog::orderBy('published_at')->limit(10)->get();
+        return response()->json($blogs, 200);
     }
 
     /**
