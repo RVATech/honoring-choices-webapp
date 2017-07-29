@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use GuzzleHttp\Client;
+use Webpatser\Uuid\Uuid;
 use Illuminate\Http\Request;
-use \Webpatser\Uuid\Uuid;
 use Illuminate\Support\Facades\Storage;
 
 class AzureFaceController extends ApiController
