@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\Blog;
 use Illuminate\Http\Request;
 
-class BlogController extends Controller
+class IndividualController extends ApiController
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::orderBy('published_at')->limit(10)->get();
-        return response()->json($blogs, 200);
+        //
     }
 
     /**

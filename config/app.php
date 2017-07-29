@@ -228,4 +228,8 @@ return [
 
     ],
 
+    'azure' => [
+        'url' => env('AZURE_BASE'),
+        'key' => env('AZURE_KEY')
+    ]
 ];
