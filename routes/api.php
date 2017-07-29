@@ -19,6 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::prefix('/v1')->group(function() {
     Route::resource('/blog', 'BlogController');
-    Route::post('/search/face-provider', 'AzureFaceController@send');
+    Route::post('/search/face', 'AzureFaceController@send');
+    Route::post('/search/face-complete', 'AzureFaceController@submit');
     Route::resource('/individual', 'IndividualController');
 });
